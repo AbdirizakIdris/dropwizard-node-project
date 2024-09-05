@@ -42,22 +42,136 @@
       <plugin>
         <artifactId>maven-compiler-plugin</artifactId>
         <configuration>
-          <source>11</source>
-          <target>11</target>
+          <source>21</source>
+          <target>21</target>
         </configuration>
       </plugin>
     </plugins>
   </build>
   <dependencies>
     <dependency>
-      <groupId>junit</groupId>
-      <artifactId>junit</artifactId>
-      <version>4.13.2</version>
+      <groupId>org.hamcrest</groupId>
+      <artifactId>hamcrest</artifactId>
+      <version>2.2</version>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>io.rest-assured</groupId>
+      <artifactId>rest-assured</artifactId>
+      <version>5.3.0</version>
       <scope>test</scope>
       <exclusions>
         <exclusion>
-          <artifactId>hamcrest-core</artifactId>
-          <groupId>org.hamcrest</groupId>
+          <artifactId>groovy</artifactId>
+          <groupId>org.apache.groovy</groupId>
+        </exclusion>
+        <exclusion>
+          <artifactId>groovy-xml</artifactId>
+          <groupId>org.apache.groovy</groupId>
+        </exclusion>
+        <exclusion>
+          <artifactId>httpmime</artifactId>
+          <groupId>org.apache.httpcomponents</groupId>
+        </exclusion>
+        <exclusion>
+          <artifactId>tagsoup</artifactId>
+          <groupId>org.ccil.cowan.tagsoup</groupId>
+        </exclusion>
+        <exclusion>
+          <artifactId>json-path</artifactId>
+          <groupId>io.rest-assured</groupId>
+        </exclusion>
+        <exclusion>
+          <artifactId>xml-path</artifactId>
+          <groupId>io.rest-assured</groupId>
+        </exclusion>
+      </exclusions>
+    </dependency>
+    <dependency>
+      <groupId>com.github.tomakehurst</groupId>
+      <artifactId>wiremock-jre8</artifactId>
+      <version>2.35.0</version>
+      <scope>test</scope>
+      <exclusions>
+        <exclusion>
+          <artifactId>jetty-webapp</artifactId>
+          <groupId>org.eclipse.jetty</groupId>
+        </exclusion>
+        <exclusion>
+          <artifactId>jetty-proxy</artifactId>
+          <groupId>org.eclipse.jetty</groupId>
+        </exclusion>
+        <exclusion>
+          <artifactId>http2-server</artifactId>
+          <groupId>org.eclipse.jetty.http2</groupId>
+        </exclusion>
+        <exclusion>
+          <artifactId>jetty-alpn-server</artifactId>
+          <groupId>org.eclipse.jetty</groupId>
+        </exclusion>
+        <exclusion>
+          <artifactId>jetty-alpn-java-server</artifactId>
+          <groupId>org.eclipse.jetty</groupId>
+        </exclusion>
+        <exclusion>
+          <artifactId>jetty-alpn-openjdk8-server</artifactId>
+          <groupId>org.eclipse.jetty</groupId>
+        </exclusion>
+        <exclusion>
+          <artifactId>jetty-alpn-java-client</artifactId>
+          <groupId>org.eclipse.jetty</groupId>
+        </exclusion>
+        <exclusion>
+          <artifactId>jetty-alpn-openjdk8-client</artifactId>
+          <groupId>org.eclipse.jetty</groupId>
+        </exclusion>
+        <exclusion>
+          <artifactId>httpclient5</artifactId>
+          <groupId>org.apache.httpcomponents.client5</groupId>
+        </exclusion>
+        <exclusion>
+          <artifactId>xmlunit-core</artifactId>
+          <groupId>org.xmlunit</groupId>
+        </exclusion>
+        <exclusion>
+          <artifactId>xmlunit-legacy</artifactId>
+          <groupId>org.xmlunit</groupId>
+        </exclusion>
+        <exclusion>
+          <artifactId>xmlunit-placeholders</artifactId>
+          <groupId>org.xmlunit</groupId>
+        </exclusion>
+        <exclusion>
+          <artifactId>json-unit-core</artifactId>
+          <groupId>net.javacrumbs.json-unit</groupId>
+        </exclusion>
+        <exclusion>
+          <artifactId>json-path</artifactId>
+          <groupId>com.jayway.jsonpath</groupId>
+        </exclusion>
+        <exclusion>
+          <artifactId>asm</artifactId>
+          <groupId>org.ow2.asm</groupId>
+        </exclusion>
+        <exclusion>
+          <artifactId>jopt-simple</artifactId>
+          <groupId>net.sf.jopt-simple</groupId>
+        </exclusion>
+        <exclusion>
+          <artifactId>handlebars</artifactId>
+          <groupId>com.github.jknack</groupId>
+        </exclusion>
+        <exclusion>
+          <artifactId>handlebars-helpers</artifactId>
+          <groupId>com.github.jknack</groupId>
+        </exclusion>
+        <exclusion>
+          <artifactId>commons-fileupload</artifactId>
+          <groupId>commons-fileupload</groupId>
+        </exclusion>
+        <exclusion>
+          <artifactId>commons-io</artifactId>
+          <groupId>commons-io</groupId>
         </exclusion>
       </exclusions>
     </dependency>
